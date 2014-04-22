@@ -166,20 +166,23 @@ void load(){
 				}
 				i++;
 			}
-			//strBuf[j] = '\0';
-			//strcpy(loadContact->company, strBuf);
 		}
 		fclose(fp);
 	}
 
 	// checks if the file is en/decrypted
-	if(isascii(listHead->next->fName[0])){
-		encrypted = false;
-		printf("Contacts are decrypted.\n");
+	if(listHead->next->next == NULL){
+		printf("No Contacts!\n");
 	}
 	else{
-		encrypted = true;
-		printf("Contacts are encrypted, decrypt for full functionality.\n");
+		if(isascii(listHead->next->fName[0])){
+			encrypted = false;
+			printf("Contacts are decrypted.\n");
+		}
+		else{
+			encrypted = true;
+			printf("Contacts are encrypted, decrypt for full functionality.\n");
+		}
 	}
 }
 

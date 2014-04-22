@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ContactList", "ContactList\ContactList.vcxproj", "{0DB3FF37-881D-4537-8CBC-98DE5935BECA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Description = Contact Direction Program
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DB3FF37-881D-4537-8CBC-98DE5935BECA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0DB3FF37-881D-4537-8CBC-98DE5935BECA}.Debug|Win32.Build.0 = Debug|Win32
+		{0DB3FF37-881D-4537-8CBC-98DE5935BECA}.Debug|Win32.Deploy.0 = Debug|Win32
+		{0DB3FF37-881D-4537-8CBC-98DE5935BECA}.Release|Win32.ActiveCfg = Release|Win32
+		{0DB3FF37-881D-4537-8CBC-98DE5935BECA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
