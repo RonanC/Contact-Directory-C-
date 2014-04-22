@@ -1,11 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
+// Ronan Connolly - G00274374 - GMIT - 22nd April 2014
+// Advanced Procedural Programming - Contacts List Project - for Damien Costello
+
 #include "global.h"
 
 // declarations
-void initList();
 void load();
 void getField();
 int showMenu();
@@ -20,13 +18,15 @@ int searchMenu();
 void search();
 void save();
 
-// linked-list
-struct contact *listHead;
-struct contact *listTail;
+void encryptWord(char *);
+void encryptFile();
 
+BOOL encrypted = false;
+
+// header and do while switch that keeps showing you options until you exit
 int main(){
 	int choice;
-
+	
 	printf("Roncon Contact Directory\n");
 	printf("========================\n");
 
@@ -53,22 +53,42 @@ int main(){
 
 			case 2:	// search
 				printf("Search:\n");
-				search();
+				if(encrypted){
+					printf("Decrypt file first!\n");
+				}
+				else{
+					search();
+				}
 				break;
 
 			case 3:	// add
 				printf("Add: \n");
-				add();
+				if(encrypted){
+					printf("Decrypt file first!\n");
+				}
+				else{
+					add();
+				}
 				break;
 
 			case 4:	// remove
 				printf("Remove:\n");
-				rem();
+				if(encrypted){
+					printf("Decrypt file first!\n");
+				}
+				else{
+					rem();
+				}
 				break;
 
 			case 5:	// edit
 				printf("Edit:\n");
-				edit();
+				if(encrypted){
+					printf("Decrypt file first!\n");
+				}
+				else{
+					edit();
+				}
 				break;	
 
 			case 6:	// sort
@@ -81,6 +101,11 @@ int main(){
 				}
 				break;
 
+			case 7:	// encrypt
+				printf("En/Decrypt:\n");
+				encryptFile();
+				break;	
+				
 			default:
 				printf("Not a valid number, re-enter.\n");
 				break;
@@ -93,19 +118,7 @@ int main(){
 	system("pause");
 } // main
 
-void initList(){
-	// set head and tail
-	listHead = (struct contact *)malloc(sizeof(struct contact));
-	listTail = (struct contact *)malloc(sizeof(struct contact));
-
-	// point head to tail, and tail to head
-	listHead->next = listTail;
-	listHead->prev = NULL;
-
-	listTail->prev = listHead;
-	listTail->next = NULL;
-} // initList
-
+// loads the .csv file by reading in each line and splitting said line into tokens (seperated by commas)
 void load(){
 	FILE *fp;
 	char buffer[60];
@@ -158,17 +171,29 @@ void load(){
 		}
 		fclose(fp);
 	}
+
+	// checks if the file is en/decrypted
+	if(isascii(listHead->next->fName[0])){
+		encrypted = false;
+		printf("Contacts are decrypted.\n");
+	}
+	else{
+		encrypted = true;
+		printf("Contacts are encrypted, decrypt for full functionality.\n");
+	}
 }
 
+// shows the main menu options
 int showMenu(){
 	int choice;
 
 	printf("\n1: View all Contacts\t");
 	printf("2: Search Contacts\t");
-	printf("3: Add Contact\t\t");
+	printf("3: Add Contact\t\t\t");
 	printf("4: Remove Contact\n");
 	printf("5: Edit Contact\t\t");
 	printf("6: Sort Contact\t\t");
+	printf("7: En/Decrypt File\t\t");
 	printf("0: Exit\n\n");
 
 	printf("Enter your choice: ");
@@ -182,11 +207,12 @@ int showMenu(){
 	return choice;
 } // showMenu
 
+// creates a new contact, asks for values (in a very secure way, gets_s) then inserts it into the end of the list
 void add(){
 	// create new contact
 	struct contact *newContact;
 	newContact = (struct contact *)malloc(sizeof(struct contact));
-	
+
 	// get data from user
 		// gets_s() more secure then gets/scanf (no buffer overflows or wrong types)
 	printf("Enter first name: ");
@@ -194,14 +220,14 @@ void add(){
 
 	//makes sure 1st letter of name is upper case
 	if(islower(newContact->fName[0])){
-		toupper(newContact->fName[0]);
+		newContact->fName[0] = toupper(newContact->fName[0]);
 	}
 	
 	printf("Enter surname name: ");
 	gets_s(newContact->sName, 15);
 
 	if(islower(newContact->sName[0])){
-		toupper(newContact->sName[0]);
+		newContact->sName[0] = toupper(newContact->sName[0]);
 	}
 
 	printf("Enter phone number: ");
@@ -222,6 +248,7 @@ void add(){
 	listTail->prev = newContact;	// after newContact
 }
 
+// shows the various sort options
 int sortMenu(){
 	int choice;
 	
@@ -241,6 +268,8 @@ int sortMenu(){
 	return choice;
 } // showMenu
 
+// sorts the list by either first or surname ascendin
+// I created my own bubble sort from scratch to do this (the pencil and paper method was essential for this piece of code ;) )
 void sort(){
 	// sort by fName, lName, phone
 	struct contact *curr, *next, *temp;
@@ -332,6 +361,7 @@ void sort(){
 	printf("Sort complete!\n");
 }
 
+// shows the various edit options
 int editMenu(){
 	int choice;
 
@@ -354,6 +384,7 @@ int editMenu(){
 	return choice;
 }
 
+// allows you to search for a contact by first/surname and select mutliple fields to edit for that chosen contact
 void edit(){
 	struct contact *curr;
 	char toEdit[15], confirm[4], updated[25];
@@ -452,6 +483,7 @@ void edit(){
 	}
 }
 
+// allows you to search for a contact by first or surname and remove it, you may iterate through various contacts with the same/similar names
 void rem(){
 	struct contact *curr;
 	char toDelete[15], confirm[4];
@@ -497,6 +529,7 @@ void rem(){
 	}
 }
 
+// prints all contacts on list to the screen
 void view(){
 	// sort by fName, lName, phone
 	struct contact *curr;
@@ -510,6 +543,7 @@ void view(){
 	}
 }
 
+// shows the search options
 int searchMenu(){
 	int choice;
 
@@ -528,7 +562,7 @@ int searchMenu(){
 	return choice;
 }
 
-// this function reveals all matching contacts
+// this function allows you to seach a contact by any of its fields/values, you can do sub string searches also, it then prints out all matching results
 void search(){
 	struct contact *curr;
 	char toSearch[25];
@@ -549,6 +583,7 @@ void search(){
 				printf("Enter first name to search (case sensitive) : ");
 				scanf("%s", &toSearch);
 				while (getchar() != '\n');
+				toSearch[0] = toupper(toSearch[0]);
 
 				while(curr->next != NULL){
 					if(strstr(curr->fName, toSearch)){
@@ -571,6 +606,7 @@ void search(){
 				printf("Enter surname to search (case sensitive) : ");
 				scanf("%s", &toSearch);
 				while (getchar() != '\n');
+				toSearch[0] = toupper(toSearch[0]);
 
 				while(curr->next != NULL){
 					if(strstr(curr->sName, toSearch)){
@@ -662,94 +698,54 @@ void search(){
 		printf("\n");
 	}while(choice != 0);	
 }
-/*
-void encrypt(){
-  printf("Hello World!\n");
-  char name[] = "vytas";
-  int i;
-  
-  printf("%s\n", name);
-  int hexMask = 0xdf;
-  int binMask = 0b11011111;
-  int decMask = 223;
-  int octMask = 0337;
 
-  int binORMask = 0b00100000;
-  
-  printf("\n%s\n", name);
+// flips all the bits in a string using the bitwise complement operator
+void encryptWord(char *ptr){
+	while(*ptr != '\0'){
+		*ptr = ~*ptr;
+		ptr++;
+	}
+}
 
-  for(i=0; i < 5; i++)
-  {
-      name[i] &= binMask;// must be hexadecimal/binary 		0x/0b
-      printf("%s\n", name);
-  }
+// iterates through each contact in the list and send each fiedl to the encryptWord function
+void encryptFile(){
+	struct contact *curr;
+	char *ptr;
+	int encryptCount = 0;
+	curr = listHead->next;
 
-  printf("\n%s\n\n", name);
+	while(curr->next != NULL){
+		//printf("%s,%s,%s,%s,%s\n", curr->fName, curr->sName, curr->phone, curr->email, curr->company);
+		encryptWord(&curr->fName[0]);
+		encryptWord(&curr->sName[0]);
+		encryptWord(&curr->phone[0]);
+		encryptWord(&curr->email[0]);
+		encryptWord(&curr->company[0]);
+		//printf("%s,%s,%s,%s,%s\n\n", curr->fName, curr->sName, curr->phone, curr->email, curr->company);
+		curr = curr->next;
+		encryptCount++;
+	}
 
-  for(i=0; i < 5; i++)
-  {
-      name[i] |= binORMask;
-      printf("%s\n", name);
-  }	
-/*
-OR
-01000001	A
-00100000	|
---------
-01100001	a
+	if(encryptCount > 0){
+		if(encrypted){
+			printf("%d contacts decrypted!\n", encryptCount);
+			encrypted = false;
+		}
+		else{
+			printf("%d contacts encrypted!\n", encryptCount);
+			encrypted = true;
+		}
+	}
+	else printf("No contacts to En/Decrypt! :(\n");
+}	
 
-
-*/
-//  printf("\n%s\n", name);
-	/*
-	http://www.branah.com/ascii-converter
-	
-	00110001 = 00110001 | 01110000;
-	1 = 1 | p;
-	1 = 1 | 0x70;
-	1 |= 0x70;
-	
-	TOUPPER
-	A = 01000001
-	a = 01100001
-	------------
-	    11011111 = 0xdf	(MASK)
-
-	01100001 = 01100001 | 11011111
-
-	CALCULATION:
-	01100001	a
-	11011111	MASK
-	--------
-	01000001	A
-	
-	Operators:
-	= assignment operator
-	== equality operator
-	+ addition operator
-
-	Operators operate on operands!:
-	1 + 2
-	
-	*/
-
-	  //name[0] &= 0xdf;
-	  //printf("%s\n", name);	
-
-//}
-//*/
-// encrypts and saves the data
+//  Saves the contacts (list) in .csv format
 void save(){
 	FILE *fp;
 	struct contact *curr;
-	int hexMask = 0x81;
-	int binMask = 11011111;
 
 	fp = fopen("contacts.csv", "w");
 	curr = listHead->next;
-
-	//printf("curr->fName:\t\t\t %s\n", curr->fName);
-	//printf("curr->fName[0] \&= hexMask:\t %s\n", curr->fName[0] & binMask);
 
 	while(curr->next != NULL){
 		fprintf(fp, "%s,%s,%s,%s,%s\n", curr->fName, curr->sName, curr->phone, curr->email, curr->company);
