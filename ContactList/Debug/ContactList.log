@@ -1,29 +1,72 @@
-﻿Build started 22/04/2014 13:26:12.
+﻿Build started 22/04/2014 16:34:54.
      1>Project "C:\Users\Ronan\Documents\Visual Studio 2012\Projects\ContactList\ContactList\ContactList.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt contactList.c
          contactList.c
-     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(108): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(115): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
-     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(115): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(123): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
-     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(115): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(123): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(200) : see declaration of 'strtok'
-     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(116): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(124): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
-     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(117): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(125): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
-     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(118): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(126): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
-     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(119): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(127): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
-     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(105): warning C4101: 'strBuf' : unreferenced local variable
-     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(154): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(176): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
-     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(225): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(235): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
-     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(236): warning C4101: 'temp' : unreferenced local variable
-     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(346): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(246): warning C4101: 'temp' : unreferenced local variable
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(348): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(364): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(376): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(389): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(390): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(397): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(398): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(405): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(406): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(413): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(414): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(421): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(422): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(461): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(473): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(480): warning C4129: '%' : unrecognized character escape sequence
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(516): warning C4129: 'S' : unrecognized character escape sequence
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(525): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(550): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(572): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(594): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(616): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(638): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>c:\users\ronan\documents\visual studio 2012\projects\contactlist\contactlist\contactlist.c(748): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ronan\Documents\Visual Studio 2012\Projects\ContactList\Debug\ContactList.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ronan\Documents\Visual Studio 2012\Projects\ContactList\Debug\ContactList.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ronan\Documents\Visual Studio 2012\Projects\ContactList\Debug\ContactList.lib" /MACHINE:X86 Debug\contactList.obj
@@ -32,4 +75,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.26
+Time Elapsed 00:00:02.37

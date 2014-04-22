@@ -1,4 +1,7 @@
-//#define NULL 0
+//#define NULL 0 // already defined be default in VS
+typedef int BOOL;
+#define true 1
+#define false 0
 
 struct contact{
 	char fName[15];

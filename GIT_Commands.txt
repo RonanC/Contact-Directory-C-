@@ -1,0 +1,17 @@
+git add --ignore-errors .
+
+git commit -m 'updated etc'
+
+git push origin master
+
+git pull origin master
+
+
+
+
+
+Initial Setup:
+git config --global user.name "Your Name Here"
+git config --global user.email "your_email@example.com"
+
+git remote add origin https://github.com/username/Hello-World.git
