@@ -1,4 +1,4 @@
-﻿Build started 22/04/2014 20:09:43.
+﻿Build started 22/04/2014 20:29:26.
      1>Project "C:\Users\Ronan\Documents\Visual Studio 2012\Projects\ContactList\ContactList\ContactList.vcxproj" on node 2 (Build target(s)).
      1>Link:
          ContactList.vcxproj -> C:\Users\Ronan\Documents\Visual Studio 2012\Projects\ContactList\Release\RonContact.exe
@@ -6,4 +6,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.08
+Time Elapsed 00:00:00.15
