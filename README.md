@@ -3,7 +3,8 @@ ContactDirectory
 
 Overview
 -----
-2nd Year (semester 4) Programming Project GMIT
+GMIT - Advanced Procedural Programming (C) - Lecturer: Damien Costello  
+GMIT Contact Directory Program - May 2014 (Semester 4)
 
 
 About
