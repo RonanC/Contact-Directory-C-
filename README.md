@@ -3,7 +3,7 @@ ContactDirectory
 
 Overview
 -----
-2nd Year Programming Project GMIT
+2nd Year (semester 4) Programming Project GMIT
 
 
 About
